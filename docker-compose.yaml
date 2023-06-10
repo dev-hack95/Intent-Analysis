@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  pyspark:
+    image: jupyter/pyspark-notebook:latest
+    environment:
+      - JUPYTER_TOKEN=rushi12345
+    ports:
+      - "9999:8888"
+    volumes:
+      - ./:/home/jovyan/work
+    container_name: pyspark
