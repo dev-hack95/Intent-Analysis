@@ -92,6 +92,27 @@ def create_donut_plot(df, feature, col):
                    textinfo='percent', textfont_size=20)
 
             return col.plotly_chart(fig_3, use_container_width=True)
+        
+        case 'days_from_last_purchase':
+            single_purchase = [x for x in df[feature] if x == 1]
+            more_than_one_purchase = [x for x in df[feature] if x > 1]
+            
+            total = len(single_purchase) + len(more_than_one_purchase)
+            lables = ['single_purchase', 'more_than_one_purchase']
+            sizes = [len(single_purchase)/total, len(more_than_one_purchase)/total]
+            
+            fig_4 = px.pie(names=lables,
+                           values=sizes,
+                           hole=0.7)
+            
+            fig_4.update_traces(
+                title_font = dict(size=25, family="Verdana",
+                                  color='darkred'),
+                hoverinfo = 'label+percent',
+                textinfo = 'percent', textfont_size=20,
+            )
+        
+            return col.plotly_chart(fig_4, use_container_width=True)
             
         
         case _:
@@ -135,6 +156,7 @@ create_donut_plot(df, 'order_status_x', col2)
 st.header("Payment Sequentials")
 col1, col2 = st.columns(2)
 create_donut_plot(df, 'payment_sequential', col1)
+create_donut_plot(df, 'days_from_last_purchase', col2)
 
 
 st.header("Impact of Late Orders on review score (distribution)")
