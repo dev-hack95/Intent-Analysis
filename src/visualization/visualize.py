@@ -109,6 +109,18 @@ def impact_of_late_orders(df, feature):
         case _:
             print("error")
 
+def create_bar_chart(df, feature, col):
+    match feature:
+        case 'customer_state' | 'seller_state':
+            df_bar = df.groupby(feature).agg({'price': 'sum'})
+            df_bar = df_bar['price'].sort_values(ascending=True)
+            df_bar = pd.DataFrame(df_bar)
+            fig = px.bar(df_bar, x='price', y=df_bar.index, orientation='h')
+            col.plotly_chart(fig)
+        
+        case _:
+            print("Error")
+
 st.header("Transctions")
 col1, col2 = st.columns(2)
 create_donut_plot(df, 'payment_type', col1)
@@ -132,4 +144,9 @@ impact_of_late_orders(df, 'late_orders_x')
 st.header("Overall review score distribution")
 fig = px.histogram(x=df['review_score'])
 st.plotly_chart(fig)
+
+st.header('State wise sales')
+col1, col2 = st.columns(2)
+create_bar_chart(df, 'customer_state', col1)
+create_bar_chart(df, 'seller_state', col2)
 
