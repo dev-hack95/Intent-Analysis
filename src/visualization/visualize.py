@@ -76,11 +76,12 @@ def create_donut_plot(df, feature, col):
             return col.plotly_chart(fig_2, use_container_width=True)
         
         case 'late_orders_x' | 'late_orders_y':
-            early_deliveries = [x for x in df[feature] if x <= 0]
-            late_deliveries = [x for x in df[feature] if x > 0]
+            early_deliveries = [x for x in df[feature] if x > 0]
+            on_time_deliveries = [x for x in df[feature] if x == 0]
+            late_deliveries = [x for x in df[feature] if x < 0]
             
-            labels = ['early_deliveries', 'late_deleveries']
-            sizes = [len(early_deliveries), len(late_deliveries)]
+            labels = ['early_deliveries', 'on_time_deliveries', 'late_deleveries']
+            sizes = [len(early_deliveries), len(on_time_deliveries),  len(late_deliveries)]
             
             fig_3 = px.pie(names=labels,
                            values=sizes,
@@ -121,8 +122,8 @@ def create_donut_plot(df, feature, col):
 def impact_of_late_orders(df, feature):
     match feature:
         case 'late_orders_x':
-            late_deliveries = [x for x in df[feature] if x > 0]
-            late_deliveries_df = df[df[feature] > 0]
+            #late_deliveries = [x for x in df[feature] if x < 0]
+            late_deliveries_df = df[df[feature] < 0]
             
             fig = px.histogram(x=late_deliveries_df['review_score'])
             return st.plotly_chart(fig)

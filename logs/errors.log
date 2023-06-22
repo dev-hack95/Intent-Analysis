@@ -1,0 +1,2 @@
+[ 2023-06-22 15:13:19,670 ] 356 kedro.pipeline.node - ERROR - Node 'rfm_analysis([merged_data]) -> [rfm_data]' failed with error: 
+object of type 'int' has no len()
