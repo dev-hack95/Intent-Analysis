@@ -1,5 +1,4 @@
 import sys
-from typing import Any, Dict, Callable
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
@@ -102,8 +101,8 @@ def rfm_analysis(merged_data: pd.DataFrame) -> pd.DataFrame:
         frequency_rows += len(chunk)
         customer_ids = chunk[frequency_feature].unique()
         for customer_id in customer_ids:
-            days = count_days_form_last_purchase(merged_data, customer_id)
-            frequency.append({'customer_unique_id': customer_id, 'count_days_form_last_purchase': days})
+            days = how_many_time_customer_purchase(merged_data, customer_id)
+            frequency.append({'customer_unique_id': customer_id, 'how_many_time_customer_purchase': days})
         print("{0} rows processed".format(frequency_rows))
 
     how_many_time_customer_purchase_dataframe = pd.DataFrame(frequency)
@@ -136,4 +135,14 @@ def rfm_analysis(merged_data: pd.DataFrame) -> pd.DataFrame:
 
     return merged_data
 
-    
+
+def translator(feature):
+    pass
+
+def sentiment_analysis(rfm_data: pd.DataFrame) -> pd.DataFrame:
+    """Transfrom Brazilian language to English then apply bert for sentiment analysis"""
+    temp_arr = ['customer_unique_id', 'review_comment_message']
+    temp_data = rfm_data[temp_arr]
+
+
+    pass
