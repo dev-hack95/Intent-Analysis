@@ -1,14 +1,15 @@
-import sys
 import numpy as np
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 import logging
 
+
+log = logging.getLogger(__name__)
 
 def merge_data(customers: pd.DataFrame, orders_items: pd.DataFrame,
                orders_payments: pd.DataFrame, orders_reviews: pd.DataFrame,
                orders: pd.DataFrame, products: pd.DataFrame, sellers: pd.DataFrame) -> pd.DataFrame:
-    logging.info("Merging Data sets")
+    log.info("Start Merging data")
     try:
         df_1 = (
             orders
@@ -22,11 +23,14 @@ def merge_data(customers: pd.DataFrame, orders_items: pd.DataFrame,
             .merge(orders, on='order_id')
             .merge(products, on='product_id')
             .merge(orders_reviews, on='order_id'))
-        
+ 
         return df
-    
+       
     except Exception as err:
-        logging.info("Error While merging data: ", err)
+        log.error("Error While merging data: ", err)
+
+    finally:
+        log.info("Merging of data is completed")
 
 
 def convert_to_datetime(df, feature):
@@ -65,19 +69,31 @@ def amount_of_purchase_made_by_customer(merged_data: pd.DataFrame, customer_id):
     
 
 def rfm_analysis(merged_data: pd.DataFrame) -> pd.DataFrame:
+    log.info("Performing Recency-Frequency-Monetry Analysis")
+
     """This code let you tranfrom object type data to datetime format"""
     # Object ---------------> Datetime
-    convert_to_datetime(merged_data, 'order_delivered_customer_date_x')
-    convert_to_datetime(merged_data, 'order_delivered_customer_date_y')
-    convert_to_datetime(merged_data, 'order_estimated_delivery_date_x')
-    convert_to_datetime(merged_data, 'order_estimated_delivery_date_y')
+    try:
+        convert_to_datetime(merged_data, 'order_delivered_customer_date_x')
+        convert_to_datetime(merged_data, 'order_delivered_customer_date_y')
+        convert_to_datetime(merged_data, 'order_estimated_delivery_date_x')
+        convert_to_datetime(merged_data, 'order_estimated_delivery_date_y')
+    except Exception as error:
+        print("Unable to convert object to datetime format")
+        print("Error: ", error)
 
-    """Calculting late orders"""
-    merged_data['late_orders_x'] = (merged_data['order_estimated_delivery_date_x'] - merged_data['order_delivered_customer_date_x']).dt.days
-    merged_data['late_orders_y'] = (merged_data['order_estimated_delivery_date_y'] - merged_data['order_delivered_customer_date_y']).dt.days
+
+    try:
+        """Calculting late orders"""
+        merged_data['late_orders_x'] = (merged_data['order_estimated_delivery_date_x'] - merged_data['order_delivered_customer_date_x']).dt.days
+        merged_data['late_orders_y'] = (merged_data['order_estimated_delivery_date_y'] - merged_data['order_delivered_customer_date_y']).dt.days
+    except Exception as error:
+        print('Error occured while calculating the number of late order.')
+        print("Error: ", error)
 
     # RFM Analysis
     # Chunking
+
     recency_feature = 'customer_unique_id'
     recency_rows = 0
     recency = []
@@ -124,7 +140,6 @@ def rfm_analysis(merged_data: pd.DataFrame) -> pd.DataFrame:
 
     purchase_made_by_customer  = pd.DataFrame(money)
 
-
     merged_data = (
         merged_data
         .merge(days_form_last_purchase, on='customer_unique_id')
@@ -143,6 +158,4 @@ def sentiment_analysis(rfm_data: pd.DataFrame) -> pd.DataFrame:
     """Transfrom Brazilian language to English then apply bert for sentiment analysis"""
     temp_arr = ['customer_unique_id', 'review_comment_message']
     temp_data = rfm_data[temp_arr]
-
-
     pass
