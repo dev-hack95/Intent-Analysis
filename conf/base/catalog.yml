@@ -46,3 +46,23 @@ merged_data:
 rfm_data:
   type: pandas.CSVDataSet
   filepath: ./data/02_intermediate/rfm_data.csv
+
+x_train:
+  type:  pickle.PickleDataSet
+  filepath: ./data/05_model_input/x_train.pkl
+  backend: pickle
+
+y_train:
+  type:  pickle.PickleDataSet
+  filepath: ./data/05_model_input/y_train.pkl
+  backend: pickle
+
+x_test:
+  type:  pickle.PickleDataSet
+  filepath: ./data/05_model_input/x_test.pkl
+  backend: pickle
+
+y_test:
+  type:  pickle.PickleDataSet
+  filepath: ./data/05_model_input/y_test.pkl
+  backend: pickle

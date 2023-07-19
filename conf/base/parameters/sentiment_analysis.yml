@@ -1,0 +1,42 @@
+# This is a boilerplate parameters config generated for pipeline 'sentiment_analysis'
+# using Kedro 0.18.10.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.18.10/kedro_project_setup/configuration.html#parameters
+
+LogisticRegression:
+  params:
+    C: 0.04 #@param {type:"number"}
+    penalty: 'l2'
+    max_iter: 1000
+
+RandomForestClassifer:
+  params:
+    n_estimators: 100
+    criterion: 'gini'
+
+AdaBoost:
+  params:
+    n_estimators: 100
+
+
+GradientBoost:
+  params:
+    n_estimators: 500
+    loss: 'log_loss'
+    max_features: 0.5
+
+BaggingClassifer:
+  params:
+    n_estimators: 500
+    max_features: 0.5
+    max_samples: 1.0
+
+ExtraTrees:
+  params:
+    n_estimators: 100
+    criterion: 'gini'
+
+SVC:
+  params:
+    kernel: 'sigmoid'

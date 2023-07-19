@@ -149,13 +149,3 @@ def rfm_analysis(merged_data: pd.DataFrame) -> pd.DataFrame:
     
 
     return merged_data
-
-
-def translator(feature):
-    pass
-
-def sentiment_analysis(rfm_data: pd.DataFrame) -> pd.DataFrame:
-    """Transfrom Brazilian language to English then apply bert for sentiment analysis"""
-    temp_arr = ['customer_unique_id', 'review_comment_message']
-    temp_data = rfm_data[temp_arr]
-    pass
