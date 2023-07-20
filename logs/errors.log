@@ -1,2 +1,4 @@
-[ 2023-06-22 15:13:19,670 ] 356 kedro.pipeline.node - ERROR - Node 'rfm_analysis([merged_data]) -> [rfm_data]' failed with error: 
-object of type 'int' has no len()
+[ 2023-07-20 11:26:16,027 ] 356 kedro.pipeline.node - ERROR - Node 'sentiment_analysis_model_caliberation([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+not all arguments converted during string formatting
+[ 2023-07-20 11:42:09,964 ] 356 kedro.pipeline.node - ERROR - Node 'sentiment_analysis_model_caliberation([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+[WinError 183] Cannot create a file when that file already exists: './data/08_reporting/Bagging_Classifer/model_caliberation/'
