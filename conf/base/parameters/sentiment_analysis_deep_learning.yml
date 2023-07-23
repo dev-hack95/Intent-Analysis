@@ -3,3 +3,24 @@
 #
 # Documentation for this file format can be found in "Parameters"
 # Link: https://docs.kedro.org/en/0.18.10/kedro_project_setup/configuration.html#parameters
+
+params:
+  max_length: 120
+  # Maximum length of the text to consider (in number of words)
+  vocab_size: 10000
+  embedding_dim: 16
+  lstm_neurons: 32
+  dropout: 0.5
+  dense_neurons: 800
+  early_stopping: 5
+  factor: 0.15
+  verbose: 2
+  mode: 'auto'
+  monitor: 'val_loss'
+  patience: 5
+  min_lr: 0.001
+  momentum: 0.9
+  lr_rate: 0.01
+  epochs: 30
+  batch_size: 16
+  
