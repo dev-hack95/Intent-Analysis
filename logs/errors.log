@@ -2,3 +2,110 @@
 not all arguments converted during string formatting
 [ 2023-07-20 11:42:09,964 ] 356 kedro.pipeline.node - ERROR - Node 'sentiment_analysis_model_caliberation([x_train,y_train,x_test,y_test]) -> None' failed with error: 
 [WinError 183] Cannot create a file when that file already exists: './data/08_reporting/Bagging_Classifer/model_caliberation/'
+[ 2023-07-23 11:57:45,181 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+local variable 'model' referenced before assignment
+[ 2023-07-23 11:58:32,179 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Output tensors of a Functional model must be the output of a TensorFlow `Layer` (thus holding past layer metadata). Found: <keras.layers.core.dense.Dense object at 0x000001DD9A3EB5B0>
+[ 2023-07-23 12:00:59,277 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Output tensors of a Functional model must be the output of a TensorFlow `Layer` (thus holding past layer metadata). Found: <keras.layers.core.dense.Dense object at 0x0000017EE4D6E2F0>
+[ 2023-07-23 12:04:46,474 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Failed to find data adapter that can handle input: <class 'numpy.ndarray'>, (<class 'list'> containing values of types {"<class 'int'>"})
+[ 2023-07-23 12:06:12,176 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+in user code:
+
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1160, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1146, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1135, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 993, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 200), found shape=(None, 120)
+
+[ 2023-07-23 12:06:51,494 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-07-23 12:09:04,782 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Graph execution error:
+
+2 root error(s) found.
+  (0) INVALID_ARGUMENT:  No OpKernel was registered to support Op 'CudnnRNN' used by {{node CudnnRNN}} with these attrs: [seed=0, dropout=0, T=DT_FLOAT, input_mode="linear_input", direction="unidirectional", rnn_mode="lstm", seed2=0, is_training=true]
+Registered devices: [CPU, GPU]
+Registered kernels:
+  <no registered kernels>
+
+	 [[CudnnRNN]]
+	 [[model/lstm/PartitionedCall]]
+	 [[SGD/gradients/PartitionedCall_1/_80]]
+  (1) INVALID_ARGUMENT:  No OpKernel was registered to support Op 'CudnnRNN' used by {{node CudnnRNN}} with these attrs: [seed=0, dropout=0, T=DT_FLOAT, input_mode="linear_input", direction="unidirectional", rnn_mode="lstm", seed2=0, is_training=true]
+Registered devices: [CPU, GPU]
+Registered kernels:
+  <no registered kernels>
+
+	 [[CudnnRNN]]
+	 [[model/lstm/PartitionedCall]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference_train_function_5743]
+[ 2023-07-23 12:11:23,769 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]

@@ -404,3 +404,448 @@ Implementing implicit namespace packages (as specified in PEP 420) is preferred 
 [ 2023-07-20 11:46:48,862 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
   np.bool8: (False, True),
 
+[ 2023-07-23 11:55:40,313 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 11:55:51,109 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 11:55:51,116 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 11:55:52,423 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:56:01,730 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:56:04,514 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 11:57:39,135 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 11:57:39,686 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 11:57:39,693 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 11:57:39,851 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:57:41,403 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:57:42,485 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 11:57:45,101 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 11:57:45,125 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 11:57:45,130 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 11:57:45,143 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 11:57:45,149 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 11:57:45,161 ] 45 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 11:57:45,181 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+local variable 'model' referenced before assignment
+[ 2023-07-23 11:57:45,189 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 11:58:26,981 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 11:58:27,489 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 11:58:27,499 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 11:58:27,635 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:58:29,146 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 11:58:30,292 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 11:58:31,228 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 11:58:31,249 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 11:58:31,252 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 11:58:31,264 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 11:58:31,272 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 11:58:31,282 ] 45 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 11:58:31,356 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 11:58:32,179 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Output tensors of a Functional model must be the output of a TensorFlow `Layer` (thus holding past layer metadata). Found: <keras.layers.core.dense.Dense object at 0x000001DD9A3EB5B0>
+[ 2023-07-23 11:58:32,186 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:00:54,043 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:00:54,494 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:00:54,505 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:00:54,641 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:00:56,220 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:00:57,350 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:00:58,406 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:00:58,415 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:00:58,420 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:00:58,425 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:00:58,435 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:00:58,448 ] 45 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:00:58,495 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:00:59,277 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Output tensors of a Functional model must be the output of a TensorFlow `Layer` (thus holding past layer metadata). Found: <keras.layers.core.dense.Dense object at 0x0000017EE4D6E2F0>
+[ 2023-07-23 12:00:59,283 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:04:41,540 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:04:42,046 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:04:42,056 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:04:42,196 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:04:43,662 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:04:44,713 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:04:45,605 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:04:45,622 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:04:45,629 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:04:45,634 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:04:45,641 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:04:45,649 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:04:45,691 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:04:46,395 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-07-23 12:04:46,474 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Failed to find data adapter that can handle input: <class 'numpy.ndarray'>, (<class 'list'> containing values of types {"<class 'int'>"})
+[ 2023-07-23 12:04:46,482 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:06:06,947 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:06:07,522 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:06:07,528 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:06:07,691 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:06:09,257 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:06:10,344 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:06:11,255 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:06:11,262 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:06:11,267 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:06:11,272 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:06:11,279 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:06:11,289 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:06:11,333 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:06:12,040 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-07-23 12:06:12,176 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+in user code:
+
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1160, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1146, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 1135, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\training.py", line 993, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 200), found shape=(None, 120)
+
+[ 2023-07-23 12:06:12,189 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:06:43,946 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:06:44,475 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:06:44,484 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:06:44,639 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:06:46,109 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:06:47,195 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:06:48,142 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:06:48,152 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:06:48,159 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:06:48,165 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:06:48,173 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:06:48,183 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:06:48,238 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:06:48,903 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-07-23 12:06:51,494 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-07-23 12:06:51,518 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:08:57,325 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:08:57,815 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:08:57,821 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:08:57,956 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:08:59,372 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:09:00,299 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:09:01,090 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:09:01,100 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:09:01,105 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:09:01,110 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:09:01,117 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:09:01,125 ] 51 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:09:01,222 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:09:01,795 ] 71 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-07-23 12:09:04,782 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Graph execution error:
+
+2 root error(s) found.
+  (0) INVALID_ARGUMENT:  No OpKernel was registered to support Op 'CudnnRNN' used by {{node CudnnRNN}} with these attrs: [seed=0, dropout=0, T=DT_FLOAT, input_mode="linear_input", direction="unidirectional", rnn_mode="lstm", seed2=0, is_training=true]
+Registered devices: [CPU, GPU]
+Registered kernels:
+  <no registered kernels>
+
+	 [[CudnnRNN]]
+	 [[model/lstm/PartitionedCall]]
+	 [[SGD/gradients/PartitionedCall_1/_80]]
+  (1) INVALID_ARGUMENT:  No OpKernel was registered to support Op 'CudnnRNN' used by {{node CudnnRNN}} with these attrs: [seed=0, dropout=0, T=DT_FLOAT, input_mode="linear_input", direction="unidirectional", rnn_mode="lstm", seed2=0, is_training=true]
+Registered devices: [CPU, GPU]
+Registered kernels:
+  <no registered kernels>
+
+	 [[CudnnRNN]]
+	 [[model/lstm/PartitionedCall]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference_train_function_5743]
+[ 2023-07-23 12:09:04,801 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 12:11:16,636 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 12:11:17,103 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 12:11:17,109 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 12:11:17,229 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:11:18,576 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 12:11:19,535 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:13: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  from kedro.extras.datasets.pickle import PickleDataSet
+
+[ 2023-07-23 12:11:20,333 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-07-23 12:11:20,341 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-07-23 12:11:20,345 ] 345 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-07-23 12:11:20,351 ] 345 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-07-23 12:11:20,357 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-07-23 12:11:20,367 ] 51 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-07-23 12:11:20,409 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\random.py:370: DeprecationWarning: non-integer arguments to randrange() have been deprecated since Python 3.10 and will be removed in a subsequent version
+  return self.randrange(a, b+1)
+
+[ 2023-07-23 12:11:21,163 ] 71 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-07-23 12:11:23,769 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-07-23 12:11:23,794 ] 202 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-07-23 16:35:42,812 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 16:35:42,834 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 16:35:43,200 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 16:35:46,988 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 16:50:16,327 ] 359 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-07-23 16:50:16,950 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\google\protobuf\__init__.py:37: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google.protobuf')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__('pkg_resources').declare_namespace(__name__)
+
+[ 2023-07-23 16:50:16,959 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\pkg_resources\__init__.py:2349: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+[ 2023-07-23 16:50:17,082 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 16:50:17,797 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\pipeline.py", line 7, in <module>
+    from .nodes import preprocess, train_model
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py", line 5, in <module>
+    import tensorflow as tf
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\__init__.py", line 37, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\__init__.py", line 45, in <module>
+    from tensorflow.python.feature_column import feature_column_lib as feature_column
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\feature_column\feature_column_lib.py", line 18, in <module>
+    from tensorflow.python.feature_column.feature_column import *
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\feature_column\feature_column.py", line 143, in <module>
+    from tensorflow.python.layers import base
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\layers\base.py", line 16, in <module>
+    from tensorflow.python.keras.legacy_tf_layers import base
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\__init__.py", line 25, in <module>
+    from tensorflow.python.keras import models
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\models.py", line 20, in <module>
+    from tensorflow.python.keras import metrics as metrics_module
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\metrics.py", line 34, in <module>
+    from tensorflow.python.keras import activations
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\activations.py", line 18, in <module>
+    from tensorflow.python.keras.layers import advanced_activations
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\layers\__init__.py", line 22, in <module>
+    from tensorflow.python.keras.engine.input_layer import Input
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\keras\engine\input_layer.py", line 24, in <module>
+    from tensorflow.python.keras.engine import base_layer
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+  warnings.warn(
+
+[ 2023-07-23 16:50:19,822 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+
+[ 2023-07-23 16:50:20,530 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\importlib\__init__.py:126: DeprecationWarning: `kedro.extras.datasets` is deprecated and will be removed in Kedro 0.19, install `kedro-datasets` instead by running `pip install kedro-datasets`.
+  return _bootstrap._gcd_import(name[level:], package, level)
+
+[ 2023-07-23 16:50:20,677 ] 345 kedro.io.data_catalog - INFO - Loading data from 'customers' (CSVDataSet)...
+[ 2023-07-23 16:50:20,877 ] 345 kedro.io.data_catalog - INFO - Loading data from 'orders_items' (CSVDataSet)...
+[ 2023-07-23 16:50:21,094 ] 345 kedro.io.data_catalog - INFO - Loading data from 'orders_payments' (CSVDataSet)...
+[ 2023-07-23 16:50:21,210 ] 345 kedro.io.data_catalog - INFO - Loading data from 'orders_reviews' (CSVDataSet)...
+[ 2023-07-23 16:50:21,499 ] 345 kedro.io.data_catalog - INFO - Loading data from 'orders' (CSVDataSet)...
+[ 2023-07-23 16:50:21,845 ] 345 kedro.io.data_catalog - INFO - Loading data from 'products' (CSVDataSet)...
+[ 2023-07-23 16:50:21,898 ] 345 kedro.io.data_catalog - INFO - Loading data from 'sellers' (CSVDataSet)...
+[ 2023-07-23 16:50:22,077 ] 331 kedro.pipeline.node - INFO - Running node: merge_data([customers,orders_items,orders_payments,orders_reviews,orders,products,sellers]) -> [merged_data]
+[ 2023-07-23 16:50:22,080 ] 12 e_commerce_case_study.pipelines.data_ingestion.nodes - INFO - Start Merging data
+[ 2023-07-23 16:50:22,972 ] 33 e_commerce_case_study.pipelines.data_ingestion.nodes - INFO - Merging of data is completed
+[ 2023-07-23 16:50:23,128 ] 384 kedro.io.data_catalog - INFO - Saving data to 'merged_data' (CSVDataSet)...
