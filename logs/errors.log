@@ -139,3 +139,153 @@ Colocation members, user-requested devices, and framework assigned devices, if a
   SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
 
 	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:19:15,599 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:21:05,214 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:23:02,705 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:24:02,273 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:37:45,734 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]

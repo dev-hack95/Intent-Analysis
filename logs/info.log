@@ -368,50 +368,24 @@ Implementing implicit namespace packages (as specified in PEP 420) is preferred 
 Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
   declare_namespace(parent)
 
-[ 2023-07-24 19:15:27,988 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorflow\python\framework\dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
-  np.bool8: (False, True),
-
-[ 2023-07-24 19:15:33,915 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\lib\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:326: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
-  np.bool8: (False, True),
-
-[ 2023-08-09 08:59:31,235 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+[ 2023-10-13 21:33:44,425 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 21:33:44,425 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
   warnings.warn(
 
-[ 2023-08-09 09:00:31,915 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis' module. Nothing defined therein will be returned by 'find_pipelines'.
+[ 2023-10-13 21:33:47,593 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_deep_learning' module. Nothing defined therein will be returned by 'find_pipelines'.
 
 Traceback (most recent call last):
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
     pipeline_module = importlib.import_module(pipeline_module_name)
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\importlib\__init__.py", line 126, in import_module
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\importlib\__init__.py", line 126, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\__init__.py", line 6, in <module>
-    from .pipeline import create_pipeline
-  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\pipeline.py", line 7, in <module>
-    from .nodes import preprocess, train_model
-  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py", line 6, in <module>
-    from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
-ModuleNotFoundError: No module named 'sklearn'
-
-  warnings.warn(
-
-[ 2023-08-09 09:00:31,944 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_deep_learning' module. Nothing defined therein will be returned by 'find_pipelines'.
-
-Traceback (most recent call last):
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
-    pipeline_module = importlib.import_module(pipeline_module_name)
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\importlib\__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
   File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_deep_learning\__init__.py", line 6, in <module>
     from .pipeline import create_pipeline
@@ -423,18 +397,20 @@ ModuleNotFoundError: No module named 'seaborn'
 
   warnings.warn(
 
-[ 2023-08-09 09:00:31,963 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_model_caliberation' module. Nothing defined therein will be returned by 'find_pipelines'.
+[ 2023-10-13 21:33:47,608 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_model_caliberation' module. Nothing defined therein will be returned by 'find_pipelines'.
 
 Traceback (most recent call last):
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
     pipeline_module = importlib.import_module(pipeline_module_name)
-  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\importlib\__init__.py", line 126, in import_module
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\importlib\__init__.py", line 126, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
   File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_model_caliberation\__init__.py", line 6, in <module>
     from .pipeline import create_pipeline
@@ -446,9 +422,672 @@ ModuleNotFoundError: No module named 'seaborn'
 
   warnings.warn(
 
-[ 2023-08-09 09:02:58,784 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+[ 2023-10-13 21:33:47,915 ] 492 kedro.io.data_catalog - INFO - Loading data from 'customers' (CSVDataSet)...
+[ 2023-10-13 21:33:48,099 ] 492 kedro.io.data_catalog - INFO - Loading data from 'orders_items' (CSVDataSet)...
+[ 2023-10-13 21:33:48,373 ] 492 kedro.io.data_catalog - INFO - Loading data from 'orders_payments' (CSVDataSet)...
+[ 2023-10-13 21:33:48,474 ] 492 kedro.io.data_catalog - INFO - Loading data from 'orders_reviews' (CSVDataSet)...
+[ 2023-10-13 21:33:48,823 ] 492 kedro.io.data_catalog - INFO - Loading data from 'orders' (CSVDataSet)...
+[ 2023-10-13 21:33:49,156 ] 492 kedro.io.data_catalog - INFO - Loading data from 'products' (CSVDataSet)...
+[ 2023-10-13 21:33:49,209 ] 492 kedro.io.data_catalog - INFO - Loading data from 'sellers' (CSVDataSet)...
+[ 2023-10-13 21:33:49,282 ] 331 kedro.pipeline.node - INFO - Running node: merge_data([customers,orders_items,orders_payments,orders_reviews,orders,products,sellers]) -> [merged_data]
+[ 2023-10-13 21:33:49,282 ] 12 e_commerce_case_study.pipelines.data_ingestion.nodes - INFO - Start Merging data
+[ 2023-10-13 21:33:50,153 ] 33 e_commerce_case_study.pipelines.data_ingestion.nodes - INFO - Merging of data is completed
+[ 2023-10-13 21:33:50,265 ] 531 kedro.io.data_catalog - INFO - Saving data to 'merged_data' (CSVDataSet)...
+[ 2023-10-13 21:33:52,943 ] 85 kedro.runner.sequential_runner - INFO - Completed 1 out of 4 tasks
+[ 2023-10-13 21:33:52,943 ] 492 kedro.io.data_catalog - INFO - Loading data from 'orders_reviews' (CSVDataSet)...
+[ 2023-10-13 21:33:53,231 ] 331 kedro.pipeline.node - INFO - Running node: preprocess([orders_reviews]) -> [x_train,y_train,x_test,y_test]
+[ 2023-10-13 21:33:53,231 ] 46 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Creating data set
+[ 2023-10-13 21:33:53,247 ] 109 py.warnings - WARNING - D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py:51: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data.dropna(inplace=True)
+
+[ 2023-10-13 21:33:53,254 ] 55 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -                                review_comment_message  review_score
+3               Recebi bem antes do prazo estipulado.             1
+4   Parabéns lojas lannister adorei comprar pela I...             1
+9   aparelho eficiente. no site a marca do aparelh...             1
+12    Mas um pouco ,travando...pelo valor ta Boa.\r\n             1
+15  Vendedor confiável, produto ok e entrega antes...             1
+[ 2023-10-13 21:33:53,259 ] 58 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Resample the data and balcing the classes
+[ 2023-10-13 21:33:53,281 ] 72 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - review_score
+0    14447
+1    14447
+Name: count, dtype: int64
+[ 2023-10-13 21:33:53,281 ] 75 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Splitting data into training and testing
+[ 2023-10-13 21:33:54,357 ] 81 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Splitting of data is done
+[ 2023-10-13 21:33:54,357 ] 86 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Tokenizing data
+[ 2023-10-13 21:33:54,763 ] 92 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Tokenizing of data is done
+[ 2023-10-13 21:33:54,763 ] 105 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Padding of the training data
+[ 2023-10-13 21:33:55,156 ] 110 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Training and testing dataset are now ready for model building.
+[ 2023-10-13 21:33:55,164 ] 113 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Stats pickeling the data
+[ 2023-10-13 21:33:55,164 ] 531 kedro.io.data_catalog - INFO - Saving data to 'x_train' (PickleDataSet)...
+[ 2023-10-13 21:33:55,176 ] 531 kedro.io.data_catalog - INFO - Saving data to 'y_train' (PickleDataSet)...
+[ 2023-10-13 21:33:55,176 ] 531 kedro.io.data_catalog - INFO - Saving data to 'x_test' (PickleDataSet)...
+[ 2023-10-13 21:33:55,191 ] 531 kedro.io.data_catalog - INFO - Saving data to 'y_test' (PickleDataSet)...
+[ 2023-10-13 21:33:55,191 ] 133 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Finished pickling of the data
+[ 2023-10-13 21:33:55,206 ] 531 kedro.io.data_catalog - INFO - Saving data to 'x_train' (PickleDataSet)...
+[ 2023-10-13 21:33:55,222 ] 531 kedro.io.data_catalog - INFO - Saving data to 'y_train' (PickleDataSet)...
+[ 2023-10-13 21:33:55,230 ] 531 kedro.io.data_catalog - INFO - Saving data to 'x_test' (PickleDataSet)...
+[ 2023-10-13 21:33:55,238 ] 531 kedro.io.data_catalog - INFO - Saving data to 'y_test' (PickleDataSet)...
+[ 2023-10-13 21:33:55,247 ] 85 kedro.runner.sequential_runner - INFO - Completed 2 out of 4 tasks
+[ 2023-10-13 21:33:55,258 ] 492 kedro.io.data_catalog - INFO - Loading data from 'merged_data' (CSVDataSet)...
+[ 2023-10-13 21:33:56,881 ] 331 kedro.pipeline.node - INFO - Running node: rfm_analysis([merged_data]) -> [rfm_data]
+[ 2023-10-13 21:33:56,881 ] 72 e_commerce_case_study.pipelines.data_ingestion.nodes - INFO - Performing Recency-Frequency-Monetry Analysis
+[ 2023-10-13 21:59:39,341 ] 531 kedro.io.data_catalog - INFO - Saving data to 'rfm_data' (CSVDataSet)...
+[ 2023-10-13 21:59:44,546 ] 85 kedro.runner.sequential_runner - INFO - Completed 3 out of 4 tasks
+[ 2023-10-13 21:59:44,546 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 21:59:44,562 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 21:59:44,578 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 21:59:44,583 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 21:59:44,598 ] 331 kedro.pipeline.node - INFO - Running node: train_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 21:59:44,598 ] 142 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Loading training and testing data
+[ 2023-10-13 21:59:44,609 ] 150 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 21:59:44,662 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 21:59:49,998 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - LogisticRegression : 0.644324
+[ 2023-10-13 21:59:49,998 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:49,998 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[1952 2421]
+ [ 662 3633]]
+[ 2023-10-13 21:59:50,016 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:50,029 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.75      0.45      0.56      4373
+           1       0.60      0.85      0.70      4295
+
+    accuracy                           0.64      8668
+   macro avg       0.67      0.65      0.63      8668
+weighted avg       0.67      0.64      0.63      8668
+
+[ 2023-10-13 21:59:50,041 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 21:59:52,339 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - RandomForest : 0.770189
+[ 2023-10-13 21:59:52,339 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:52,355 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[3551  822]
+ [1170 3125]]
+[ 2023-10-13 21:59:52,363 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:52,416 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.75      0.81      0.78      4373
+           1       0.79      0.73      0.76      4295
+
+    accuracy                           0.77      8668
+   macro avg       0.77      0.77      0.77      8668
+weighted avg       0.77      0.77      0.77      8668
+
+[ 2023-10-13 21:59:52,424 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 21:59:58,866 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - AdaBoost : 0.742963
+[ 2023-10-13 21:59:58,866 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:58,866 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[3194 1179]
+ [1049 3246]]
+[ 2023-10-13 21:59:58,881 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 21:59:58,893 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.75      0.73      0.74      4373
+           1       0.73      0.76      0.74      4295
+
+    accuracy                           0.74      8668
+   macro avg       0.74      0.74      0.74      8668
+weighted avg       0.74      0.74      0.74      8668
+
+[ 2023-10-13 21:59:58,907 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 22:00:27,630 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - GradientBoost : 0.809529
+[ 2023-10-13 22:00:27,630 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:00:27,630 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[3574  799]
+ [ 852 3443]]
+[ 2023-10-13 22:00:27,647 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:00:27,658 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.81      0.82      0.81      4373
+           1       0.81      0.80      0.81      4295
+
+    accuracy                           0.81      8668
+   macro avg       0.81      0.81      0.81      8668
+weighted avg       0.81      0.81      0.81      8668
+
+[ 2023-10-13 22:00:27,673 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 22:02:16,206 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - BaggingClassifer : 0.815759
+[ 2023-10-13 22:02:16,206 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:16,206 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[3757  616]
+ [ 981 3314]]
+[ 2023-10-13 22:02:16,206 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:16,241 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.79      0.86      0.82      4373
+           1       0.84      0.77      0.81      4295
+
+    accuracy                           0.82      8668
+   macro avg       0.82      0.82      0.82      8668
+weighted avg       0.82      0.82      0.82      8668
+
+[ 2023-10-13 22:02:16,241 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 22:02:16,857 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - DecisionTree : 0.697162
+[ 2023-10-13 22:02:16,857 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:16,874 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[2981 1392]
+ [1233 3062]]
+[ 2023-10-13 22:02:16,874 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:16,895 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.71      0.68      0.69      4373
+           1       0.69      0.71      0.70      4295
+
+    accuracy                           0.70      8668
+   macro avg       0.70      0.70      0.70      8668
+weighted avg       0.70      0.70      0.70      8668
+
+[ 2023-10-13 22:02:16,906 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 22:02:22,260 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ExtraTrees : 0.748962
+[ 2023-10-13 22:02:22,278 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:22,278 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[3372 1001]
+ [1175 3120]]
+[ 2023-10-13 22:02:22,278 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:02:22,305 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.74      0.77      0.76      4373
+           1       0.76      0.73      0.74      4295
+
+    accuracy                           0.75      8668
+   macro avg       0.75      0.75      0.75      8668
+weighted avg       0.75      0.75      0.75      8668
+
+[ 2023-10-13 22:02:22,313 ] 177 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - ##################################################
+[ 2023-10-13 22:03:01,294 ] 180 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - SVC : 0.654476
+[ 2023-10-13 22:03:01,302 ] 181 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:03:01,302 ] 183 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - [[2969 1404]
+ [1591 2704]]
+[ 2023-10-13 22:03:01,310 ] 184 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO - --------------------------------------------------
+[ 2023-10-13 22:03:01,322 ] 186 e_commerce_case_study.pipelines.sentiment_analysis.nodes - INFO -               precision    recall  f1-score   support
+
+           0       0.65      0.68      0.66      4373
+           1       0.66      0.63      0.64      4295
+
+    accuracy                           0.65      8668
+   macro avg       0.65      0.65      0.65      8668
+weighted avg       0.65      0.65      0.65      8668
+
+[ 2023-10-13 22:03:01,392 ] 85 kedro.runner.sequential_runner - INFO - Completed 4 out of 4 tasks
+[ 2023-10-13 22:03:01,400 ] 105 kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+[ 2023-10-13 22:03:30,419 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
   warnings.warn(
 
-[ 2023-08-11 13:22:25,320 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+[ 2023-10-13 22:03:35,693 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_deep_learning' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+
+[ 2023-10-13 22:14:33,729 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:14:33,737 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:14:40,628 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:14:40,628 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:14:40,644 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:14:40,644 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:14:40,644 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:14:40,663 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:14:41,486 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:18:33,142 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:18:33,142 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:19:12,402 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:19:12,420 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:19:12,429 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:19:12,429 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:19:12,446 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:19:12,461 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:19:13,402 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:19:15,599 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:19:15,643 ] 213 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-10-13 22:20:58,280 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:20:58,280 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:21:02,284 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:21:02,293 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:21:02,300 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:21:02,300 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:21:02,309 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:21:02,323 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:21:03,293 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:21:05,214 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:21:05,245 ] 213 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-10-13 22:22:55,244 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:22:55,244 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:22:59,712 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:22:59,712 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:22:59,728 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:22:59,728 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:22:59,728 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:22:59,744 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:23:00,827 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:23:02,705 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:23:02,738 ] 213 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-10-13 22:23:55,156 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:23:55,172 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:23:59,297 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:23:59,305 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:23:59,313 ] 475 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:23:59,321 ] 475 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:23:59,329 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:23:59,345 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:24:00,241 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:24:02,273 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:24:02,306 ] 213 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-10-13 22:36:28,527 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-13 22:36:28,542 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-13 22:36:28,564 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.data_ingestion' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+  File "C:\Users\rushi\Miniconda3\envs\deep_learn\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\data_ingestion\__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\data_ingestion\pipeline.py", line 2, in <module>
+    from .nodes import merge_data,  rfm_analysis
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\data_ingestion\nodes.py", line 37
+    match feature:
+          ^
+SyntaxError: invalid syntax
+
+  warnings.warn(
+
+[ 2023-10-13 22:37:41,526 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-13 22:37:41,555 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-13 22:37:41,555 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-13 22:37:41,576 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-13 22:37:41,585 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-13 22:37:41,593 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-13 22:37:42,765 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-13 22:37:45,734 ] 356 kedro.pipeline.node - ERROR - Node 'train_dl_model([x_train,y_train,x_test,y_test]) -> None' failed with error: 
+Cannot assign a device for operation model/embedding/embedding_lookup: Could not satisfy explicit device specification '' because the node {{colocation_node model/embedding/embedding_lookup}} was colocated with a group of nodes that required incompatible device '/job:localhost/replica:0/task:0/device:GPU:0'. All available devices [/job:localhost/replica:0/task:0/device:CPU:0, /job:localhost/replica:0/task:0/device:GPU:0]. 
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=2 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+StridedSlice: GPU CPU 
+Unique: GPU CPU 
+Shape: GPU CPU 
+_Arg: GPU CPU 
+ResourceGather: GPU CPU 
+Identity: GPU CPU 
+Const: GPU CPU 
+UnsortedSegmentSum: GPU CPU 
+ResourceSparseApplyKerasMomentum: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  model_embedding_embedding_lookup_3501 (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  sgd_sgd_update_resourcesparseapplykerasmomentum_accum (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  model/embedding/embedding_lookup (ResourceGather) 
+  model/embedding/embedding_lookup/Identity (Identity) 
+  SGD/SGD/update/Unique (Unique) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/Shape (Shape) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_1 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice/stack_2 (Const) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/strided_slice (StridedSlice) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/UnsortedSegmentSum (UnsortedSegmentSum) /job:localhost/replica:0/task:0/device:GPU:0
+  SGD/SGD/update/ResourceSparseApplyKerasMomentum (ResourceSparseApplyKerasMomentum) /job:localhost/replica:0/task:0/device:GPU:0
+
+	 [[{{node model/embedding/embedding_lookup}}]] [Op:__inference_train_function_5743]
+[ 2023-10-13 22:37:45,776 ] 213 kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+[ 2023-10-14 17:10:45,977 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 17:12:06,956 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-14 17:12:06,962 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 17:12:13,815 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-14 17:12:13,832 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-14 17:12:13,832 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-14 17:12:13,855 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-14 17:12:13,855 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-14 17:12:13,872 ] 50 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-14 17:12:14,664 ] 70 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-14 17:32:40,361 ] 86 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - <keras.src.callbacks.History object at 0x000001DD1420A210>
+[ 2023-10-14 17:32:40,515 ] 85 kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+[ 2023-10-14 17:32:40,523 ] 105 kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+[ 2023-10-14 20:46:58,288 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 20:55:10,391 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-14 20:55:10,391 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 20:55:16,622 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-14 20:55:16,649 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-14 20:55:16,657 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-14 20:55:16,657 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-14 20:55:16,657 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-14 20:55:16,681 ] 51 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-14 20:55:17,421 ] 74 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-14 21:22:02,337 ] 90 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - <keras.src.callbacks.History object at 0x000002817961A790>
+[ 2023-10-14 21:22:02,358 ] 85 kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+[ 2023-10-14 21:22:02,359 ] 105 kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+[ 2023-10-14 22:02:37,008 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-14 22:02:37,008 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 22:02:45,526 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-14 22:02:45,544 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-14 22:02:45,544 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-14 22:02:45,555 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-14 22:02:45,555 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-14 22:02:45,573 ] 52 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-14 22:02:46,443 ] 75 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-14 22:26:51,405 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-14 22:26:51,421 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 22:26:54,984 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\pipeline.py", line 7, in <module>
+    from .nodes import preprocess, train_model
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis\nodes.py", line 5, in <module>
+    import tensorflow as tf
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\tensorflow\__init__.py", line 56, in <module>
+    from ._api.v2 import distribute
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\tensorflow\_api\v2\distribute\__init__.py", line 182, in <module>
+    from . import experimental
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\tensorflow\_api\v2\distribute\experimental\__init__.py", line 9, in <module>
+    from . import partitioners
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1032, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1131, in get_data
+KeyboardInterrupt
+
+  warnings.warn(
+
+[ 2023-10-14 22:26:56,159 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_deep_learning' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_deep_learning\__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_deep_learning\pipeline.py", line 7, in <module>
+    from .nodes import train_dl_model
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_deep_learning\nodes.py", line 7, in <module>
+    import seaborn as sns
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\seaborn\__init__.py", line 12, in <module>
+    from .widgets import *  # noqa: F401,F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\seaborn\widgets.py", line 6, in <module>
+    from ipywidgets import interact, FloatSlider, IntSlider
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\ipywidgets\__init__.py", line 27, in <module>
+    from IPython import get_ipython
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\__init__.py", line 54, in <module>
+    from .terminal.embed import embed
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\terminal\embed.py", line 16, in <module>
+    from IPython.terminal.interactiveshell import TerminalInteractiveShell
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\terminal\interactiveshell.py", line 31, in <module>
+    from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\__init__.py", line 25, in <module>
+    from .application import Application
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\application\__init__.py", line 3, in <module>
+    from .application import Application
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\application\application.py", line 36, in <module>
+    from prompt_toolkit.buffer import Buffer
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\buffer.py", line 25, in <module>
+    from .completion import (
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\completion\__init__.py", line 3, in <module>
+    from .base import (
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\completion\base.py", line 11, in <module>
+    from prompt_toolkit.formatted_text import AnyFormattedText, StyleAndTextTuples
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\formatted_text\__init__.py", line 15, in <module>
+    from .ansi import ANSI
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\formatted_text\ansi.py", line 6, in <module>
+    from prompt_toolkit.output.vt100 import BG_ANSI_COLORS, FG_ANSI_COLORS
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\prompt_toolkit\output\__init__.py", line 5, in <module>
+    from .defaults import create_output
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1138, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1078, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1504, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1476, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1640, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 105, in _path_join
+KeyboardInterrupt
+
+  warnings.warn(
+
+[ 2023-10-14 22:26:56,458 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py:359: UserWarning: An error occurred while importing the 'e_commerce_case_study.pipelines.sentiment_analysis_model_caliberation' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\project\__init__.py", line 357, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_model_caliberation\__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_model_caliberation\pipeline.py", line 7, in <module>
+    from .nodes import sentiment_analysis_model_caliberation
+  File "D:\Python\ML\Project\e-commerce-case-study\src\e_commerce_case_study\pipelines\sentiment_analysis_model_caliberation\nodes.py", line 5, in <module>
+    import seaborn as sns
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\seaborn\__init__.py", line 12, in <module>
+    from .widgets import *  # noqa: F401,F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\seaborn\widgets.py", line 6, in <module>
+    from ipywidgets import interact, FloatSlider, IntSlider
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\ipywidgets\__init__.py", line 27, in <module>
+    from IPython import get_ipython
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\__init__.py", line 54, in <module>
+    from .terminal.embed import embed
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\terminal\embed.py", line 17, in <module>
+    from IPython.terminal.ipapp import load_default_config
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\terminal\ipapp.py", line 29, in <module>
+    from IPython.core.magics import (
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magics\__init__.py", line 20, in <module>
+    from .display import DisplayMagics
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magics\display.py", line 27, in <module>
+    class DisplayMagics(Magics):
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magics\display.py", line 74, in DisplayMagics
+    @magic_arguments.magic_arguments()
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magic_arguments.py", line 241, in __call__
+    func.parser = construct_parser(func)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magic_arguments.py", line 178, in construct_parser
+    parser = MagicArgumentParser(arg_name, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\IPython\core\magic_arguments.py", line 153, in __init__
+    super(MagicArgumentParser, self).__init__(prog=prog, usage=usage,
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\argparse.py", line 1772, in __init__
+    self._positionals = add_group(_('positional arguments'))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\gettext.py", line 605, in gettext
+    return dgettext(_current_domain, message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\gettext.py", line 568, in dgettext
+    t = translation(domain, _localedirs.get(domain, None))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\gettext.py", line 511, in translation
+    mofiles = find(domain, localedir, languages, all=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rushi\Miniconda3\envs\data_sci\Lib\gettext.py", line 494, in find
+    mofile = os.path.join(localedir, lang, 'LC_MESSAGES', '%s.mo' % domain)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 121, in join
+KeyboardInterrupt
+
+  warnings.warn(
+
+[ 2023-10-14 22:27:07,302 ] 364 kedro.framework.session.session - INFO - Kedro project e-commerce-case-study
+[ 2023-10-14 22:27:07,305 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
+  warnings.warn(
+
+[ 2023-10-14 22:27:11,438 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_train' (PickleDataSet)...
+[ 2023-10-14 22:27:11,458 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_train' (PickleDataSet)...
+[ 2023-10-14 22:27:11,463 ] 492 kedro.io.data_catalog - INFO - Loading data from 'x_test' (PickleDataSet)...
+[ 2023-10-14 22:27:11,472 ] 492 kedro.io.data_catalog - INFO - Loading data from 'y_test' (PickleDataSet)...
+[ 2023-10-14 22:27:11,477 ] 331 kedro.pipeline.node - INFO - Running node: train_dl_model([x_train,y_train,x_test,y_test]) -> None
+[ 2023-10-14 22:27:11,486 ] 52 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - Succesfully loded the data
+[ 2023-10-14 22:27:12,162 ] 75 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - None
+[ 2023-10-14 22:38:03,720 ] 91 e_commerce_case_study.pipelines.sentiment_analysis_deep_learning.nodes - INFO - <keras.src.callbacks.History object at 0x000001C03FFE9D10>
+[ 2023-10-14 22:38:03,752 ] 85 kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+[ 2023-10-14 22:38:03,754 ] 105 kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+[ 2023-10-15 10:30:04,732 ] 109 py.warnings - WARNING - C:\Users\rushi\Miniconda3\envs\data_sci\Lib\site-packages\kedro\framework\session\session.py:266: FutureWarning: ConfigLoader will be deprecated in Kedro 0.19. Please use the OmegaConfigLoader instead. To consult the documentation for OmegaConfigLoader, see here: https://docs.kedro.org/en/stable/configuration/advanced_configuration.html#omegaconfigloader
   warnings.warn(
 
